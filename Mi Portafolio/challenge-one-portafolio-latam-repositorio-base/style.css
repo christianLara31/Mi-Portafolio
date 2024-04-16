@@ -1,0 +1,385 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sección Menu*/
+/* Estilos generales */
+/* Estilos generales */
+
+
+/* Contenedor principal */
+.tudo {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Menú */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #F5F5F5;
+  ;
+  color: #030000;
+}
+
+.menu__list__item:nth-child(1),
+.menu__list__item:nth-child(2),
+.menu__list__item:nth-child(3),
+.menu__list__item:nth-child(4),
+.menu__list__item:nth-child(5){
+  display: none
+}
+
+.menu__header {
+  display: flex;
+  align-items: center;
+}
+
+.menu__title {
+  margin-left: 10px;
+}
+
+.menu__list {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu__list__item {
+  margin-right: 20px;
+}
+
+/* Header/Title/Hero */
+.title {
+  background-color: #f2f2f2;
+  padding: 50px;
+}
+
+.title__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title__profile {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-right: 30px;
+}
+
+.title__container {
+  flex: 1;
+}
+
+.title__bio {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.title__subsection {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.title__network {
+  display: flex;
+  list-style-type: none;
+}
+
+.title__network__item {
+  margin-right: 20px;
+}
+
+/* Secciones */
+section {
+  padding: 50px;
+}
+
+.about,
+.skills,
+.hobbies,
+.academic,
+.experience,
+.formcontato,
+.footer {
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: #EAF2FD;
+}
+
+/* Habilidades y Pasatiempos */
+.skills__line,
+.hobbies__line {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills__box,
+.hobbies__box {
+  flex: 1 0 25%; 
+  margin-bottom: 20px;
+}
+
+.skills__img,
+.hobbies__img {
+  width: fill;
+  height: fixed;
+  padding: 16px;
+  gap: 8px;
+}
+
+/* Experiencia */
+.experience__box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap:25px;
+}
+
+.experience__img {
+  width: 296px;
+  height: 144px;
+  margin-right: 20px;
+ 
+}
+
+.experience__info {
+  flex: 1;
+}
+
+.experience__title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.experience__text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.experience__description {
+  display: flex;
+}
+
+.experiencia__botao--repo{
+  background-color: white;
+  border-color: #2A7AE4;
+  color: #2A7AE4;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+.experience__description{
+  gap: 16px;
+}
+.experience__botao--demo{
+
+background-color: #2A7AE4;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  
+
+}
+/* Contacto */
+.formcontato__contacto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  
+}
+
+.formcontato--esquerda {
+ display: none;
+}
+
+.formcontato__text {
+  flex: 2;
+}
+
+.formcontato__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.formcontato__subtext {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.formcontato__form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.formcontato__input,
+.formcontato__textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formcontato__botao {
+  width: 133px;
+  height: 40px;
+  padding: 12px 16px 12px 16px;
+  background-color: #2A7AE4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;  
+}
+
+/* Estilos para el formulario */
+.formcontato__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formcontato__input,
+.formcontato__textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formcontato__botao {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  width: 144px;
+  height: 51px;
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+.formcontato__botao:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+}
+
+
+@media (min-width:834px){
+
+  .title__div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+  }
+
+    .menu__list__item:nth-child(6){
+      font-weight: bold;
+    }
+  
+
+  .experience__img {
+    width: 75%;
+    height: auto;
+    
+  }
+
+
+}
+
+@media (min-width:1334px){
+
+  .menu__list__item:nth-child(1),
+  .menu__list__item:nth-child(2),
+  .menu__list__item:nth-child(3),
+  .menu__list__item:nth-child(4),
+  .menu__list__item:nth-child(5){
+
+    display: flex
+
+  }
+
+ 
+
+  .formcontato--esquerda {
+    display: flex;
+    margin-right: 50px;
+  }
+
+  .formcontato__img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+}
